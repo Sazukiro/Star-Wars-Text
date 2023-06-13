@@ -34,4 +34,24 @@
 ```
 Правило `@keyframes` устанавливает ключевые кадры при анимации элемента. В данной работе это правило применяется к классу `"crawl"` и ключевыми кадрами являются начальные и конечные свойства объекта такие как положение (`top 0px` -> `top -6000px`), угл наклона и многие другие, а процентами `0%` и `100%` обозначаются начальный и конечный кадр.
 
-Для того чтобы достичь ещё большей схожести с оригиналом применяем такие свйоства как
+Для того чтобы достичь ещё большей схожести с оригиналом применяем такие свойства как: `transform`, `-webkit-transform`, `-moz-transform`, `-ms-transform`, `-o-transform`. Благодаря ним текст осуществляет небольшой поворот.
+
+```css
+@keyframes crawl{
+    0%{
+        top: 0px;
+        transform: rotatex(20deg) translateZ(0);
+        -webkit-transform: rotatex(20deg) translateZ(0);
+        -moz-transform: rotatex(20deg) translateZ(0);
+        -ms-transform: rotatex(20deg) translateZ(0);
+        -o-transform: rotatex(20deg) translateZ(0);
+}
+    100%{
+        top: -6000px;
+        transform: rotatex(25deg) translateZ(-2500px);
+        -webkit-transform: rotatex(25deg) translateZ(-2500px);
+        -moz-transform: rotatex(25deg) translateZ(-2500px);
+        -ms-transform: rotatex(25deg) translateZ(-2500px);
+        -o-transform: rotatex(25deg) translateZ(-2500px);
+}
+```
